@@ -10,16 +10,16 @@ import { Link } from "react-router-dom";
 import Button from "../../shared/button";
 
 const legalList = [
-  { name: "Cookie Policy", link: "" },
-  { name: "Terms of Use", link: "" },
-  { name: "Privacy Policy", ink: "" },
-  { name: "Sitemap", link: "" },
+  { name: "Cookie Policy", link: "", id: "01" },
+  { name: "Terms of Use", link: "", id: "02" },
+  { name: "Privacy Policy", ink: "", id: "03" },
+  { name: "Sitemap", link: "", id: "04" },
 ];
 const companyList = [
-  { name: "About Us", link: "" },
-  { name: "Service Us", link: "" },
-  { name: "Contact", link: "" },
-  { name: "Company", link: "" },
+  { name: "About Us", link: "", id: "01" },
+  { name: "Service Us", link: "", id: "02" },
+  { name: "Contact", link: "", id: "03" },
+  { name: "Company", link: "", id: "04" },
 ];
 
 const Footer = () => {
@@ -50,9 +50,9 @@ const Footer = () => {
               <div className="flex flex-col gap-2">
                 {companyList?.map((list) => {
                   return (
-                    <>
+                    <div key={list.id}>
                       <Link to={list?.link}>{list?.name}</Link>
-                    </>
+                    </div>
                   );
                 })}
               </div>
@@ -65,9 +65,9 @@ const Footer = () => {
               <div className="flex flex-col gap-2">
                 {legalList?.map((items) => {
                   return (
-                    <>
+                    <div key={items.id}>
                       <Link to={items?.link}>{items?.name}</Link>
-                    </>
+                    </div>
                   );
                 })}
               </div>

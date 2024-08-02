@@ -1,26 +1,43 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 import Home from "./controller/home";
-import Header from "./controller/header";
-import Footer from "./controller/footer";
 import MealPlan from "./controller/mealPlan";
 import AddToCart from "./controller/addToCart";
 import SubscribeMeal from "./controller/subscribeMeal";
+import { IndexLayout, MealLayout } from "./Layout";
+
+const Help = () => {
+  return (
+    <div className="h-screen w-full flex  justify-center items-center bg-gray-700">
+      <h1 className=" font-bold text-6xl">Help Page</h1>
+    </div>
+  );
+};
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<IndexLayout />}>
+      <Route index element={<Home />} />
+      <Route path="meal-plan" element={<MealLayout />}>
+        <Route index element={<MealPlan />} />
+        <Route path="add-to-cart" element={<AddToCart />} />
+        <Route path="subscribe-meal" element={<SubscribeMeal />} />
+      </Route>
+      <Route path="help" element={<Help />} />
+    </Route>
+  )
+);
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/meal-plan" element={<MealPlan />} />
-          <Route path="/add-to-cart" element={<AddToCart />} />
-          <Route path="/subscribe-meal" element={<SubscribeMeal />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <RouterProvider router={router}></RouterProvider>
     </>
   );
 }

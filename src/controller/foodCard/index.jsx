@@ -9,17 +9,17 @@ export default function FoodCard(props) {
   const { type } = props;
   return (
     <div>
-      <div class="max-w-sm bg-white rounded-lg shadow-2xl m-2">
+      <div className="max-w-sm bg-white rounded-lg shadow-2xl m-2">
         <a href="#">
-          <img class="p-2 rounded-2xl" src={`${Image}`} alt="" />
+          <img className="p-2 rounded-2xl" src={`${Image}`} alt="" />
         </a>
-        <div class="px-2">
+        <div className="px-2">
           <a href="#">
-            <h5 class="mb-2 text-lg sm:text-xl font-bold tracking-tight text-black">
+            <h5 className="mb-2 text-lg sm:text-xl font-bold tracking-tight text-black">
               LITE BITE
             </h5>
           </a>
-          <p class="mb-3 text-sm sm:font-normal text-gray-500 ">
+          <p className="mb-3 text-sm sm:font-normal text-gray-500 ">
             1 Vegitable, 1 Dal, 3 Chapati, 1 Salad/Soup
           </p>
           {type === "mealplan" && (
@@ -27,10 +27,12 @@ export default function FoodCard(props) {
               <Button
                 buttonName={"Subscribe Meal"}
                 classStyle={"!bg-black !text-xs !px-[10px]"}
+                to="subscribe-meal"
               />
               <Button
                 buttonName={"Add to cart"}
                 classStyle={"!text-xs !px-3"}
+                to="add-to-cart"
               />
             </div>
           )}

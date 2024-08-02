@@ -13,16 +13,19 @@ import {
 
 const navItem = [
   {
+    id: "01",
     name: "Help",
     icon: faHireAHelper,
-    link: "",
+    link: "help",
   },
   {
+    id: "02",
     name: "Cart",
     icon: faCartShopping,
     link: "",
   },
   {
+    id: "03",
     name: "Sign In",
     icon: faArrowRightToBracket,
     link: "",
@@ -60,7 +63,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="z-10 fixed w-full md:text-lg text-sm font-semibold border-b-[1px] border-gray-400 bg-white">
+      <div className="fixed top-0 w-full md:text-lg text-sm font-semibold border-b-[1px] border-gray-400 bg-white">
         <div className="w-full flex lg:flex-row flex-col justify-between sm:gap-5 lg:gap-0">
           {/* left */}
 
@@ -139,7 +142,7 @@ const Header = () => {
             </div>
             {navItem?.map((items) => {
               return (
-                <>
+                <div key={items.id}>
                   <Link
                     className="flex flex-row items-center gap-3 p-3 lg:p-0 mb-0 sm:mb-3 lg:mb-0"
                     to={items?.link}
@@ -148,7 +151,7 @@ const Header = () => {
                     <FontAwesomeIcon icon={items?.icon} />
                     <p>{items?.name}</p>
                   </Link>
-                </>
+                </div>
               );
             })}
           </div>

@@ -35,7 +35,7 @@ const mealPlanBannerContent = (
 const MealPlan = () => {
   return (
     <>
-      <div className="w-full h-full">
+      <div className="w-full  h-full">
         <Banner BannerImg={MealPlanImg} content={mealPlanBannerContent} />
 
         <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-0 w-full justify-center items-center bg-white text-black">

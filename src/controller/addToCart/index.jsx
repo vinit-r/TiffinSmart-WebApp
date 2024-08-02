@@ -7,7 +7,7 @@ import FoodCard from "../foodCard";
 const AddToCart = () => {
   return (
     <>
-      <div className="w-full h-full ">
+      <div className="w-full h-full  ">
         <div className="w-full p-4 lg:p-20 flex flex-col sm:flex-row gap-2 sm:gap-10">
           <div className="w-full lg:w-1/2 flex flex-col items-center gap-2 sm:gap-5">
             <img src={`${FoodImg}`} alt="" className="w-full rounded-lg" />

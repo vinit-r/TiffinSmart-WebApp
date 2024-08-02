@@ -11,7 +11,7 @@ import {
 const SubscribeMeal = () => {
   return (
     <>
-      <div className="h-full w-full">
+      <div className="h-full mt-[90px] w-full">
         <div></div>
         <div>
           <p>Payment Method</p>
