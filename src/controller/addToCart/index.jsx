@@ -81,7 +81,7 @@ const AddToCart = () => {
               <Button
                 buttonName={"Subscribe Meal"}
                 classStyle={"!bg-black  !px-[10px]"}
-                to={"subscribe-meal"}
+                to={".."}
               />
               <Button
                 buttonName={"Add to cart"}
