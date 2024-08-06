@@ -1,14 +1,41 @@
 import React from "react";
 
-import FoodImg from "../../assets/image/food1.jpg";
+import FoodImg from "../../assets/image/cardFood1.png";
 import Button from "../../shared/button";
 import FoodCard from "../foodCard";
+
+const foodCardItemAddToCart = [
+  {
+    image: FoodImg,
+    foodName: "LIGHT BITE",
+    foodMenu: "1 Vegitable, 1 Dal, 3 Chapati, 1 Salad/Soup",
+    rating: "4",
+    delivery: "Free",
+    time: "10 min",
+  },
+  {
+    image: FoodImg,
+    foodName: "HEALTHY MEAL",
+    foodMenu: "1 Vegitable, 1 Paneer Dish, 2 Chapati, 1 Salad",
+    rating: "4.5",
+    delivery: "Free",
+    time: "15 min",
+  },
+  {
+    image: FoodImg,
+    foodName: "FULL MEAL",
+    foodMenu: "2 Vegetables, 1 Dal, 3 Chapati, 1 Salad, 1 Rice",
+    rating: "4.8",
+    delivery: "Free",
+    time: "20 min",
+  },
+];
 
 const AddToCart = () => {
   return (
     <>
-      <div className="w-full h-full  ">
-        <div className="w-full p-4 lg:p-20 flex flex-col sm:flex-row gap-2 sm:gap-10">
+      <div className="w-full h-full px-4 pt-10 sm:pt-20 lg:px-12  ">
+        <div className="w-full flex flex-col sm:flex-row gap-2 sm:gap-10">
           <div className="w-full lg:w-1/2 flex flex-col items-center gap-2 sm:gap-5">
             <img src={`${FoodImg}`} alt="" className="w-full rounded-lg" />
             <Button
@@ -54,19 +81,32 @@ const AddToCart = () => {
               <Button
                 buttonName={"Subscribe Meal"}
                 classStyle={"!bg-black  !px-[10px]"}
+                to={"subscribe-meal"}
               />
-              <Button buttonName={"Add to cart"} classStyle={"!px-3"} />
+              <Button
+                buttonName={"Add to cart"}
+                classStyle={"!px-3"}
+                to={"add-to-cart"}
+              />
             </div>
           </div>
         </div>
-        <div className="flex flex-col px-2 lg:px-16 mb-20">
-          <div className="text-xl sm:text-2xl md:text-3xl pl-4 font-extrabold pb-0 sm:pb-8">
+        <div className="flex flex-col mb-20 pt-20">
+          <div className="text-xl sm:text-2xl md:text-3xl pl-4 font-extrabold text-center lg:text-start pb-4 sm:pb-8">
             Related Products
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-10 justify-items-center">
+            {foodCardItemAddToCart?.map((items, index) => (
+              <FoodCard
+                key={index}
+                image={items?.image}
+                foodName={items?.foodName}
+                foodMenu={items?.foodMenu}
+                rating={items?.rating}
+                delivery={items?.delivery}
+                time={items?.time}
+              />
+            ))}
           </div>
         </div>
       </div>

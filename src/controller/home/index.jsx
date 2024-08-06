@@ -9,6 +9,7 @@ import {
   faCircleChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
+// Components
 import Header from "../header";
 import Footer from "../footer";
 import Button from "../../shared/button";
@@ -16,9 +17,21 @@ import Banner from "../../shared/banner";
 import FoodCard from "../foodCard";
 import Card from "../../shared/card";
 
-import BannerImg from "../../assets/image/bannerFood.png";
+// Banner Images
+import BannerImg from "../../assets/image/bannerimage.png";
+import SpecialBG from "../../assets/image/specialFoodBG.png";
+
+// it Works Card
+import CardOne from "../../assets/image/card1.png";
+import CardTwo from "../../assets/image/card2.png";
+import CardThree from "../../assets/image/card3.png";
 import "./index.css";
 
+//foodCard
+import FoodCardImg from "../../assets/image/cardFood1.png";
+// import foodCardItem from "../../jsonData/JsonData";
+
+// Json Data
 const content = (
   <div className="flex flex-col sm:w-full lg:w-1/2 gap-4 sm:gap-8">
     <span className="text-xs sm:text-base pt-5 lg:pt-0">People Trust Us</span>
@@ -60,15 +73,61 @@ const responsive = {
     partialVisibilityGutter: 0,
   },
 };
+const foodCardItem = [
+  {
+    image: FoodCardImg,
+    foodName: "LIGHT BITE",
+    foodMenu: "1 Vegitable, 1 Dal, 3 Chapati, 1 Salad/Soup",
+    rating: "4",
+    delivery: "Free",
+    time: "10 min",
+  },
+  {
+    image: FoodCardImg,
+    foodName: "HEALTHY MEAL",
+    foodMenu: "1 Vegitable, 1 Paneer Dish, 2 Chapati, 1 Salad, 1 Dessert",
+    rating: "4.5",
+    delivery: "Free",
+    time: "15 min",
+  },
+  {
+    image: FoodCardImg,
+    foodName: "FULL MEAL",
+    foodMenu: "2 Vegetables, 1 Dal, 3 Chapati, 1 Salad, 1 Rice",
+    rating: "4.8",
+    delivery: "Free",
+    time: "20 min",
+  },
+];
+const itWorksCard = [
+  {
+    icon: CardOne,
+    title: "East To Order",
+    text: `But I must explain to you how all this mistaken idea of denouncing pleasur and prasising pain was bron.`,
+  },
+  {
+    icon: CardTwo,
+    title: "Healthy Food",
+    text: `But I must explain to you how all this mistaken idea of denouncing pleasur and prasising pain was bron.`,
+  },
+  {
+    icon: CardThree,
+    title: "Fast Delivery",
+    text: `But I must explain to you how all this mistaken idea of denouncing pleasur and prasising pain was bron.`,
+  },
+];
 const Home = () => {
+  const bannerStyle = {
+    backgroundImage: `url("${BannerImg}")`,
+  };
   return (
     <>
       <div className="w-full h-full ">
         {/* <Header /> */}
 
-        <Banner BannerImg={BannerImg} content={content} />
+        <Banner bannerStyle={bannerStyle} content={content} />
 
-        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-0 w-full justify-center items-center">
+        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-5 md:px-16  w-full justify-center items-center bg-red-200">
           <div className="flex flex-col gap-2 sm:gap-5 text-center sm:w-[70vw]">
             <div className="text-3xl font-bold">
               Today <span className="text-theme-color">Special</span> Offers
@@ -80,8 +139,10 @@ const Home = () => {
               deserunt quo, ducimus aliquam maiores.
             </p>
           </div>
-          <div className="w-full pl-0 lg:pl-6 py-10">
-            <Carousel
+          <div
+            className={`w-full pl-0 lg:pl-6 py-10 bg-[url('${SpecialBG}')] bg-cover bg-no-repeat flex justify-center items-center justify-items-center `}
+          >
+            {/* <Carousel
               responsive={responsive}
               ssr={true}
               infinite={true}
@@ -100,11 +161,11 @@ const Home = () => {
               <FoodCard />
               <FoodCard />
               <FoodCard />
-            </Carousel>
+            </Carousel> */}
           </div>
         </div>
 
-        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-0 w-full justify-center items-center bg-gradient-to-r from-black to-[#241d10] text-white">
+        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-5 md:px-16 w-full justify-center items-center bg-gradient-to-r from-black to-[#241d10] text-white">
           <div className="flex flex-col gap-2 sm:gap-5 text-center sm:w-[70vw]">
             <div className="text-3xl font-bold">
               How <span className="text-theme-color">it</span> works
@@ -116,14 +177,14 @@ const Home = () => {
               deserunt quo, ducimus aliquam maiores.
             </p>
           </div>
-          <div className="flex flex-wrap gap-6 py-10 sm:py-20 justify-center items-center">
-            <Card />
-            <Card />
-            <Card />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-5 sm:py-20 justify-center items-center">
+            {itWorksCard?.map((data) => (
+              <Card icon={data?.icon} title={data?.title} text={data?.text} />
+            ))}
           </div>
         </div>
 
-        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-0 w-full justify-center items-center bg-white text-black">
+        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-5 md:px-16 w-full justify-center items-center bg-white text-black">
           <div className="flex flex-col gap-2 sm:gap-5 text-center sm:w-[70vw]">
             <div className="text-3xl font-bold">Meal Plans</div>
 
@@ -151,9 +212,16 @@ const Home = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-5 sm:py-20 justify-center items-center">
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
+            {foodCardItem?.map((items) => (
+              <FoodCard
+                image={items?.image}
+                foodName={items?.foodName}
+                foodMenu={items?.foodMenu}
+                rating={items?.rating}
+                delivery={items?.delivery}
+                time={items?.time}
+              />
+            ))}
           </div>
 
           <Link to="/meal-plan" className="flex items-center cursor-pointer">
@@ -167,7 +235,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="flex w-full px-5 sm:px-20 py-10 bg-[#fff4f4]">
+        <div className="flex w-full py-10 px-3 sm:px-5 md:px-16 bg-[#fff4f4]">
           <div className="w-full sm:w-1/2 flex flex-col sm:gap-10 gap-5">
             <div className="text-2xl text-center sm:text-start sm:text-3xl font-bold">
               It's Now <span className="text-[#f4444c]">More Easy</span> to{" "}

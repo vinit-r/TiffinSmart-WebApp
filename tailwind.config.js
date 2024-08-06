@@ -11,6 +11,9 @@ export default {
         "primary-font": ["Nunito", "sans-serif"],
         "banner-font": ["Edu AU VIC WA NT Hand", "cursive"],
       },
+      // width: {
+      //   clamp: "clamp(30vw, 40vw, 100vw)", // Custom width using clamp
+      // },
     },
   },
   plugins: [],

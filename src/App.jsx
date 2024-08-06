@@ -11,6 +11,8 @@ import MealPlan from "./controller/mealPlan";
 import AddToCart from "./controller/addToCart";
 import SubscribeMeal from "./controller/subscribeMeal";
 import { IndexLayout, MealLayout } from "./Layout";
+import Checkout from "./controller/checkout";
+import CouponModel from "./controller/coupon";
 
 const Help = () => {
   return (
@@ -29,6 +31,7 @@ const router = createBrowserRouter(
         <Route path="add-to-cart" element={<AddToCart />} />
         <Route path="subscribe-meal" element={<SubscribeMeal />} />
       </Route>
+      <Route path="/checkout" element={<Checkout />} />
       <Route path="help" element={<Help />} />
     </Route>
   )

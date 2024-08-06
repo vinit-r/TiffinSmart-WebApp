@@ -2,32 +2,34 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import debounce from "lodash.debounce";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHireAHelper } from "@fortawesome/free-brands-svg-icons";
 import {
-  faCartShopping,
-  faArrowRightToBracket,
   faMagnifyingGlass,
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
+import Logo from "../../assets/image/tsLogo.png";
+import HelpIcon from "../../assets/image/helpIcon.png";
+import cartIcon from "../../assets/image/cartIcon.png";
+import signUpIcon from "../../assets/image/loginIcon.png";
+
 const navItem = [
   {
     id: "01",
     name: "Help",
-    icon: faHireAHelper,
+    icon: HelpIcon,
     link: "help",
   },
   {
     id: "02",
     name: "Cart",
-    icon: faCartShopping,
+    icon: cartIcon,
     link: "",
   },
   {
     id: "03",
     name: "Sign In",
-    icon: faArrowRightToBracket,
+    icon: signUpIcon,
     link: "",
   },
 ];
@@ -63,12 +65,17 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 w-full md:text-lg text-sm font-semibold border-b-[1px] border-gray-400 bg-white">
-        <div className="w-full flex lg:flex-row flex-col justify-between sm:gap-5 lg:gap-0">
+      <div className="fixed top-0 w-full md:text-lg text-sm font-semibold border-b-[1px] border-gray-400 bg-white z-10">
+        <div className="w-full flex lg:flex-row flex-col justify-between sm:gap-5 lg:gap-0 sm:my-4 my-2 px-0 sm:px-4">
           {/* left */}
 
-          <div className="lg:p-7 p-3 flex justify-between">
+          <div className="flex justify-between items-center gap-3">
             <div className="font-normal flex gap-2 items-center">
+              <img
+                className="sm:w-10 w-8 sm:h-14 h-12"
+                src={`${Logo}`}
+                alt="Tiffin Smart Logo"
+              />
               <span className="font-semibold border-b-2 border-[#e43204] pb-[0.5px]">
                 Pardesipura
               </span>
@@ -117,7 +124,7 @@ const Header = () => {
           <div
             className={`${
               showMenu ? "block" : "hidden"
-            } lg:flex lg:flex-row flex-col lg:gap-10 gap-0 lg:p-7 p-0 sm:px-0 px-3 `}
+            } lg:flex lg:flex-row flex-col lg:gap-10 gap-0 justify-center items-center`}
           >
             <div className="md:flex flex-row items-center gap-3 px-3 py-2 lg:p-0 mb-0 sm:mb-3 lg:mb-0">
               <label
@@ -144,11 +151,12 @@ const Header = () => {
               return (
                 <div key={items.id}>
                   <Link
-                    className="flex flex-row items-center gap-3 p-3 lg:p-0 mb-0 sm:mb-3 lg:mb-0"
+                    className="flex flex-row items-center gap-2 p-3 lg:p-0 mb-0 sm:mb-3 lg:mb-0"
                     to={items?.link}
                     onClick={() => setShowMenu(false)}
                   >
-                    <FontAwesomeIcon icon={items?.icon} />
+                    {/* <FontAwesomeIcon icon={items?.icon} /> */}
+                    <img className="w-6 h-6" src={`${items?.icon}`} alt="" />
                     <p>{items?.name}</p>
                   </Link>
                 </div>

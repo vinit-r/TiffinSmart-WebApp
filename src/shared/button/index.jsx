@@ -16,7 +16,9 @@ const Button = (props) => {
         ) : (
           ""
         )}
-        <Link to={to}>{buttonName}</Link>
+        <Link onClick={handleClick} to={to}>
+          {buttonName}
+        </Link>
         {/* <button onClick={handleClick}>{buttonName}</button> */}
       </div>
     </>
