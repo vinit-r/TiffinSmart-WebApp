@@ -3,6 +3,7 @@ import React from "react";
 import FoodImg from "../../assets/image/cardFood1.png";
 import Button from "../../shared/button";
 import FoodCard from "../foodCard";
+import { useLocation } from "react-router-dom";
 
 const foodCardItemAddToCart = [
   {
@@ -11,7 +12,7 @@ const foodCardItemAddToCart = [
     foodMenu: "1 Vegitable, 1 Dal, 3 Chapati, 1 Salad/Soup",
     rating: "4",
     delivery: "Free",
-    time: "10 min",
+    time: "10 min", //TODO
   },
   {
     image: FoodImg,
@@ -81,7 +82,7 @@ const AddToCart = () => {
               <Button
                 buttonName={"Subscribe Meal"}
                 classStyle={"!bg-black  !px-[10px]"}
-                to={".."}
+                to={"../subscribe-meal"}
               />
               <Button
                 buttonName={"Add to cart"}

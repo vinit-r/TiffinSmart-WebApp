@@ -10,8 +10,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // Components
-import Header from "../header";
-import Footer from "../footer";
 import Button from "../../shared/button";
 import Banner from "../../shared/banner";
 import FoodCard from "../foodCard";
@@ -178,8 +176,13 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-5 sm:py-20 justify-center items-center">
-            {itWorksCard?.map((data) => (
-              <Card icon={data?.icon} title={data?.title} text={data?.text} />
+            {itWorksCard?.map((data, i) => (
+              <Card
+                icon={data?.icon}
+                key={i}
+                title={data?.title}
+                text={data?.text}
+              />
             ))}
           </div>
         </div>
@@ -212,8 +215,9 @@ const Home = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-5 sm:py-20 justify-center items-center">
-            {foodCardItem?.map((items) => (
+            {foodCardItem?.map((items, i) => (
               <FoodCard
+                key={i}
                 image={items?.image}
                 foodName={items?.foodName}
                 foodMenu={items?.foodMenu}

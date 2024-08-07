@@ -156,7 +156,7 @@ const CouponModel = (props) => {
           </div>
           {
             <CouponAppliedModel
-              setClickApply={setClickApply}
+              setClickApply={setClickApply} //FIXME
               clickApply={clickApply}
               toggleClickApply={toggleClickApply}
             />

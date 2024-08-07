@@ -1,7 +1,8 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import debounce from "lodash.debounce";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faMagnifyingGlass,
   faBars,
@@ -15,19 +16,16 @@ import signUpIcon from "../../assets/image/loginIcon.png";
 
 const navItem = [
   {
-    id: "01",
     name: "Help",
     icon: HelpIcon,
     link: "help",
   },
   {
-    id: "02",
     name: "Cart",
     icon: cartIcon,
     link: "",
   },
   {
-    id: "03",
     name: "Sign In",
     icon: signUpIcon,
     link: "",
@@ -71,15 +69,17 @@ const Header = () => {
 
           <div className="flex justify-between items-center gap-3">
             <div className="font-normal flex gap-2 items-center">
-              <img
-                className="sm:w-10 w-8 sm:h-14 h-12"
-                src={`${Logo}`}
-                alt="Tiffin Smart Logo"
-              />
+              <Link to="/">
+                <img
+                  className="sm:w-10 w-8 sm:h-14 h-12"
+                  src={`${Logo}`}
+                  alt="Tiffin Smart Logo"
+                  // onClick={() => navigate("/")}
+                />
+              </Link>
               <span className="font-semibold border-b-2 border-[#e43204] pb-[0.5px]">
                 Pardesipura
               </span>
-              {"  "}
               Electronic Complex
             </div>
 
@@ -147,9 +147,9 @@ const Header = () => {
                 )}
               </label>
             </div>
-            {navItem?.map((items) => {
+            {navItem?.map((items, i) => {
               return (
-                <div key={items.id}>
+                <div key={i}>
                   <Link
                     className="flex flex-row items-center gap-2 p-3 lg:p-0 mb-0 sm:mb-3 lg:mb-0"
                     to={items?.link}

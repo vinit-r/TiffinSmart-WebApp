@@ -148,8 +148,9 @@ const MealPlan = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-2  py-5 sm:py-20 justify-center items-center">
-            {foodCardItem?.map((items) => (
+            {foodCardItem?.map((items, i) => (
               <FoodCard
+                key={i}
                 image={items?.image}
                 foodName={items?.foodName}
                 foodMenu={items?.foodMenu}
