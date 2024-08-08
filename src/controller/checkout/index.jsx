@@ -1,10 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import CouponMode from "../coupon";
-import CouponAppliedModel from "../couponAppliedModal";
-import Banner from "../../shared/banner";
+import AddNewAddress from "../addNewAddress";
+import WalletPaymentModal from "../walletPaymentModal";
 
-import BannerImg from "../../assets/image/mealPlanBanner.png";
 import FoodImg from "../../assets/image/food1.jpg";
 import DiscountImg from "../../assets/image/Discount.png";
 import NextArrow from "../../assets/image/nextArrow.png";
@@ -12,46 +11,20 @@ import LocationIcon from "../../assets/image/locationIcon.png";
 
 import Button from "../../shared/button";
 
-// const ckeckoutBannerContent = (
-//   <div className="flex flex-col w-full gap-4 sm:gap-8 justify-center items-center text-base sm:text-4xl font-bold text-center text-white pt-8 lg:pt-0">
-//     <span className="font-banner-font">
-//       Tasty delicious tiffin to fit your lifestyle
-//     </span>
-//     <div className="text-theme-color font-banner-font">
-//       <span className="px-2 ms:px-3 border-r-2 sm:border-r-4 border-theme-color">
-//         Healthy
-//       </span>
-//       <span className="px-2 ms:px-3 border-r-2 sm:border-r-4 border-theme-color">
-//         Hygiene
-//       </span>
-//       <span className="px-2 ms:px-3 border-r-2 sm:border-r-4 border-theme-color">
-//         Tasty
-//       </span>
-//       <span className="px-2 ms:px-3 border-r-2 sm:border-r-4 border-theme-color">
-//         Timely
-//       </span>
-//     </div>
-//   </div>
-// );
-// const bannerStyle = {
-//   backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url("${BannerImg}")`,
-// };
-
 const Checkout = () => {
   const [showCoupon, setShowCoupon] = useState(false);
+  const [clickOnAddAddress, setClickOnAddAddress] = useState(false);
 
   const toggleShowCoupon = () => {
     setShowCoupon(!showCoupon);
+  };
+  const toggleClickOnAddAddress = () => {
+    setClickOnAddAddress(!clickOnAddAddress);
   };
 
   return (
     <>
       <div className="relative">
-        {/* <Banner
-          bannerStyle={bannerStyle}
-          content={ckeckoutBannerContent}
-          classStyle={"lg:!h-full lg:!pb-[5rem] lg:!pt-[10rem]"}
-        /> */}
         <div className="w-full flex md:flex-row flex-col px-2 lg:px-10 xl:px-16">
           <div className="flex items-center sm:items-start flex-col gap-2 sm:gap-3 py-10 w-full">
             <p className="text-xl sm:text-2xl font-semibold">
@@ -163,6 +136,7 @@ const Checkout = () => {
                           <Button
                             buttonName={"Add New"}
                             classStyle={"rounded-sm !px-8"}
+                            handleClick={() => toggleClickOnAddAddress()}
                           />
                         </span>
                       </div>
@@ -257,7 +231,11 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-        {/* <CouponAppliedModel /> */}
+        <AddNewAddress
+          toggleClickOnAddAddress={toggleClickOnAddAddress}
+          clickOnAddAddress={clickOnAddAddress}
+        />
+        <WalletPaymentModal />
       </div>
     </>
   );

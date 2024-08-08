@@ -19,6 +19,8 @@ import ServiceUs from "./controller/serviceUs";
 import Contact from "./controller/contact";
 import Company from "./controller/company";
 import CookiePolicy from "./controller/cookiePolicy";
+import OrderPlaced from "./controller/orderPlaced";
+import Customization from "./controller/customization";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,6 +40,8 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="company" element={<Company />} />
       <Route path="cookie-policy" element={<CookiePolicy />} />
+      <Route path="order-placed" element={<OrderPlaced />} />
+      <Route path="customization" element={<Customization />} />
     </Route>
   )
 );
