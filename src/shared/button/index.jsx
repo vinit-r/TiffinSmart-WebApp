@@ -9,7 +9,6 @@ const Button = (props) => {
     <>
       <div
         className={`bg-theme-color text-xs sm:text-base py-2 !px-6 sm:px-4 rounded-md inline-block font-semibold text-white ${classStyle}`}
-        // onClick={handleClick}
       >
         {icon ? (
           <FontAwesomeIcon className={`pr-2 ${iconStyle}`} icon={icon} />
@@ -19,7 +18,6 @@ const Button = (props) => {
         <Link onClick={handleClick} to={to}>
           {buttonName}
         </Link>
-        {/* <button onClick={handleClick}>{buttonName}</button> */}
       </div>
     </>
   );

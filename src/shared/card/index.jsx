@@ -1,5 +1,4 @@
 import React from "react";
-import cardIcon from "../../assets/image/coffie.png";
 
 const Card = (props) => {
   const { icon, title, text } = props;
