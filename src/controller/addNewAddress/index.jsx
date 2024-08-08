@@ -15,13 +15,13 @@ const AddNewAddress = (props) => {
         isOpen={clickOnAddAddress}
         onRequestClose={() => toggleClickOnAddAddress()}
         className="Modal w-full mx-auto rounded-md outline-none"
-        overlayClassName="Overlay fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 "
+        overlayClassName="Overlay fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 overflow-y-auto"
         ariaHideApp={false}
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
       >
         <div className="flex w-full h-full justify-start">
-          <div className="bg-white w-full sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 h-full flex justify-center overflow-y-scroll">
+          <div className="bg-white w-full sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 h-full flex justify-center ">
             <div className="w-full pb-16">
               <p className="flex justify-between items-center text-xl md:text-xl lg:text-2xl sm:font-bold font-semibold bg-black text-white w-full py-5 px-5 border-b-4 border-gray-500">
                 <span className="">Save New Address</span>

@@ -12,7 +12,7 @@ const WalletPaymentModal = (props) => {
   return (
     <>
       <Modal
-        isOpen={true}
+        isOpen={false}
         // onRequestClose={() => toggleClickOnAddAddress()}
         className="Modal w-full mx-auto rounded-md outline-none"
         overlayClassName="Overlay fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 "

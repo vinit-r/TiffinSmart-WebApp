@@ -14,7 +14,6 @@ const Inputs = (props) => {
   return (
     <div className="flex flex-col gap-1 w-full">
       {label && <label className={`${labelStyle}`}>{label}</label>}
-      {/* <div className={`${labelStyle}`}> */}
       <div className="">
         <input
           value={value}
