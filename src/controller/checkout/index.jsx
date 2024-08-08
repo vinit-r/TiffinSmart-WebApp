@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import CouponMode from "../coupon";
 import CouponAppliedModel from "../couponAppliedModal";
+import AddNewAddress from "../addNewAddress";
+import WalletPaymentModal from "../walletPaymentModal";
 import Banner from "../../shared/banner";
 
 import BannerImg from "../../assets/image/mealPlanBanner.png";
@@ -11,37 +13,17 @@ import NextArrow from "../../assets/image/nextArrow.png";
 import LocationIcon from "../../assets/image/locationIcon.png";
 
 import Button from "../../shared/button";
-
-// const ckeckoutBannerContent = (
-//   <div className="flex flex-col w-full gap-4 sm:gap-8 justify-center items-center text-base sm:text-4xl font-bold text-center text-white pt-8 lg:pt-0">
-//     <span className="font-banner-font">
-//       Tasty delicious tiffin to fit your lifestyle
-//     </span>
-//     <div className="text-theme-color font-banner-font">
-//       <span className="px-2 ms:px-3 border-r-2 sm:border-r-4 border-theme-color">
-//         Healthy
-//       </span>
-//       <span className="px-2 ms:px-3 border-r-2 sm:border-r-4 border-theme-color">
-//         Hygiene
-//       </span>
-//       <span className="px-2 ms:px-3 border-r-2 sm:border-r-4 border-theme-color">
-//         Tasty
-//       </span>
-//       <span className="px-2 ms:px-3 border-r-2 sm:border-r-4 border-theme-color">
-//         Timely
-//       </span>
-//     </div>
-//   </div>
-// );
-// const bannerStyle = {
-//   backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url("${BannerImg}")`,
-// };
-
+import { useNavigate } from "react-router-dom";
 const Checkout = () => {
   const [showCoupon, setShowCoupon] = useState(false);
+  const [clickOnAddAddress, setClickOnAddAddress] = useState(false);
+  const navigate = useNavigate();
 
   const toggleShowCoupon = () => {
     setShowCoupon(!showCoupon);
+  };
+  const toggleClickOnAddAddress = () => {
+    setClickOnAddAddress(!clickOnAddAddress);
   };
 
   return (
@@ -89,6 +71,7 @@ const Checkout = () => {
                 </div>
               </div>
             </div>
+
             <div className="flex border-[1px] border-gray-400 p-2 lg:p-3 shadow-xl w-full sm:w-auto">
               <div className="flex flex-col">
                 <div className="flex pb-2">
@@ -111,6 +94,7 @@ const Checkout = () => {
                     <Button
                       buttonName={"Add New"}
                       classStyle={"rounded-sm !px-8"}
+                      handleClick={() => toggleClickOnAddAddress()}
                     />
                   </span>
                 </div>
@@ -118,6 +102,11 @@ const Checkout = () => {
             </div>
           </div>
         </div>
+        <AddNewAddress
+          toggleClickOnAddAddress={toggleClickOnAddAddress}
+          clickOnAddAddress={clickOnAddAddress}
+        />
+        <WalletPaymentModal />
       </div>
     </>
   );

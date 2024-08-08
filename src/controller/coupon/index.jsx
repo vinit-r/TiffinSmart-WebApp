@@ -23,13 +23,13 @@ const CouponModel = (props) => {
         // className={`flex flex-col relative w-full mx-auto rounded-md outline-none`}
         className="Modal w-full mx-auto rounded-md outline-none"
         // overlayClassName={`fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 overflow-y-scroll`}
-        overlayClassName="Overlay fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 overflow-y-scroll"
+        overlayClassName="Overlay fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 "
         ariaHideApp={false}
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
       >
         <div className="flex w-full h-full justify-end">
-          <div className="bg-white w-full sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 h-full flex justify-center py-5 sm:py-10 sm:px-5 px-3 ">
+          <div className="bg-white w-full sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 h-full flex justify-center py-5 sm:py-10 sm:px-5 px-3 overflow-y-scroll">
             <div className="flex flex-col">
               <img
                 className="h-5 w-7 sm:h-7 sm:w-9 cursor-pointer"
