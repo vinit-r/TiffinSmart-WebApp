@@ -3,6 +3,8 @@ import Button from "../../shared/button";
 import MasterCard from "../../assets/image/MasterCard.png";
 import Visa from "../../assets/image/Visa.png";
 
+import Inputs from "../../shared/input";
+
 function CreditCard() {
   return (
     <div className="w-full  ">
@@ -21,23 +23,17 @@ function CreditCard() {
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
-              <label htmlFor="creadiCardNo"></label>
-              <input type="text" />
-            </div>
-            <div>
-              <label htmlFor="name"></label>
-              <input type="text" />
-            </div>
+        <div className="flex flex-col">
+          <div className="flex gap-3">
+            <Inputs label={"Credit card No."} />
+            <Inputs label={"Name On Card"} />
           </div>
-          <div>
-            <div>
-              <label htmlFor="creadiCardNo"></label>
-              <input type="text" />
-            </div>
-            <div></div>
+          <div className="flex gap-3">
+            <Inputs label={"Expiry Date"} />
+            <Inputs label={"Cvv No."} />
+          </div>
+          <div className="flex justify-end  ">
+            <Button buttonName={"Pay Now"} />
           </div>
         </div>
       </div>
