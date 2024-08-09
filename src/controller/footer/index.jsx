@@ -12,7 +12,7 @@ import Button from "../../shared/button";
 const legalList = [
   { name: "Cookie Policy", link: "cookie-policy" },
   { name: "Terms of Use", link: "term-of-use" },
-  { name: "Privacy Policy", ink: "privacy-policy" },
+  { name: "Privacy Policy", link: "privacy-policy" },
   { name: "Sitemap", link: "sitemap" },
 ];
 const companyList = [

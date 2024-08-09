@@ -18,6 +18,7 @@ import {
   PlaceOrderLayout,
   PaymentLayout,
 } from "./Layout";
+import ScrollOnTop from "./util/ScrollOnTop";
 import Checkout from "./controller/checkout";
 import CouponModel from "./controller/coupon";
 import Help from "./controller/help";
@@ -26,7 +27,11 @@ import ServiceUs from "./controller/serviceUs";
 import Contact from "./controller/contact";
 import Company from "./controller/company";
 import CookiePolicy from "./controller/cookiePolicy";
+import TermOfUse from "./controller/termOfUse";
 import PlaceOrder from "./controller/placeOrder";
+import PrivacyPolicy from "./controller/privacyPolicy";
+import SiteMap from "./controller/siteMap";
+
 import {
   CashOnDelivery,
   CreditCard,
@@ -64,6 +69,9 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="company" element={<Company />} />
       <Route path="cookie-policy" element={<CookiePolicy />} />
+      <Route path="term-of-use" element={<TermOfUse />} />
+      <Route path="privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="sitemap" element={<SiteMap />} />
     </Route>
   )
 );
