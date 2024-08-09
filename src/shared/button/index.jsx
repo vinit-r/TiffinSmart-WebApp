@@ -6,18 +6,18 @@ const Button = (props) => {
   const { buttonName, classStyle, icon, handleClick, to, iconStyle } = props;
   return (
     <>
-      <div
+      <Link
         className={`bg-theme-color inline-block text-xs sm:text-base py-2 px-6 sm:px-4 rounded-md font-semibold cursor-pointer text-white ${classStyle}`}
         onClick={handleClick}
+        to={to}
       >
         {icon ? (
           <FontAwesomeIcon className={`pr-2 ${iconStyle}`} icon={icon} />
         ) : (
           ""
         )}
-        <Link to={to}>{buttonName}</Link>
-        {/* <button onClick={handleClick}>{buttonName}</button> */}
-      </div>
+        <button>{buttonName}</button>
+      </Link>
     </>
   );
 };

@@ -62,9 +62,17 @@ const ckeckoutBannerContent = (
 
 function MealLayout() {
   const location = useLocation();
-  console.log(location.pathname);
-  console.log(location);
-  const noLayoutPaths = ["/meal-plan/subscribe-meal/checkout"];
+  // console.log("✌️location --->", location);
+
+  const noLayoutPaths = [
+    "/meal-plan/subscribe-meal/checkout",
+    "/meal-plan/subscribe-meal/checkout/place-order",
+    "/meal-plan/subscribe-meal/checkout/place-order/payment",
+    "/meal-plan/subscribe-meal/checkout/place-order/payment/debit-card",
+    "/meal-plan/subscribe-meal/checkout/place-order/payment/net-banking",
+    "/meal-plan/subscribe-meal/checkout/place-order/payment/upi-wallets",
+    "/meal-plan/subscribe-meal/checkout/place-order/payment/credit-card",
+  ];
   const shouldUseLayout = !noLayoutPaths.includes(location.pathname);
   return (
     <div className="">

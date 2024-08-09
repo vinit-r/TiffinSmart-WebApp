@@ -8,9 +8,9 @@ function IndexLayout() {
   return (
     <>
       <div className="relative">
-        {/* <Header /> */}
+        <Header />
         <Outlet />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

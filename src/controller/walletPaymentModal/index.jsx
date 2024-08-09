@@ -8,11 +8,11 @@ import Inputs from "../../shared/input";
 import paytmImg from "../../assets/image/paytmLogo.png";
 
 const WalletPaymentModal = (props) => {
-  // const { toggleClickOnAddAddress, clickOnAddAddress } = props;
+  //   const { toggleClickOnAddAddress, clickOnAddAddress } = props;
   return (
     <>
       <Modal
-        isOpen={false}
+        // isOpen={true}
         // onRequestClose={() => toggleClickOnAddAddress()}
         className="Modal w-full mx-auto rounded-md outline-none"
         overlayClassName="Overlay fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 "
