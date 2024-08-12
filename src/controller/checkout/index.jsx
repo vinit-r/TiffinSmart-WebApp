@@ -105,7 +105,6 @@ const Checkout = () => {
           toggleClickOnAddAddress={toggleClickOnAddAddress}
           clickOnAddAddress={clickOnAddAddress}
         />
-        <WalletPaymentModal />
       </div>
     </>
   );

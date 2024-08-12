@@ -1,13 +1,9 @@
 import React from "react";
-import { Outlet, Link, NavLink } from "react-router-dom";
-import Button from "../shared/button";
-// import Wallets from "../assets/image/Wallets.svg";
+import { Outlet, NavLink } from "react-router-dom";
 import { BsCreditCard2Front } from "react-icons/bs";
 import { BsCreditCard2Back } from "react-icons/bs";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
-import { GiBanknote } from "react-icons/gi";
 import { TfiWallet } from "react-icons/tfi";
-import { GiMouse } from "react-icons/gi";
 import { BiSolidBank } from "react-icons/bi";
 
 function PaymentLayout() {
@@ -57,7 +53,7 @@ function PaymentLayout() {
                     className={({ isActive }) =>
                       `${
                         isActive ? " bg-white text-black" : null
-                      } text-xl font-semibold px-4 py-5 w-full rounded-l-2xl block`
+                      } text-xl  font-semibold px-4 py-5 w-full rounded-l-2xl block`
                     }
                   >
                     {link.icon}

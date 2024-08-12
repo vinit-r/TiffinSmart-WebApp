@@ -16,7 +16,7 @@ const Button = (props) => {
         ) : (
           ""
         )}
-        <button>{buttonName}</button>
+        <button className="outline-none">{buttonName}</button>
       </Link>
     </>
   );

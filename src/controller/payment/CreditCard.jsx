@@ -8,8 +8,8 @@ import Inputs from "../../shared/input";
 function CreditCard() {
   return (
     <div className="w-full  ">
-      <div>
-        <div>
+      <div className="p-8 ">
+        <div className="">
           <h1 className="font-bold text-xl text-theme-color">
             Pay using Credit Card
           </h1>
@@ -23,7 +23,7 @@ function CreditCard() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex text-lg font-semibold mt-10 gap-4 flex-col">
           <div className="flex gap-3">
             <Inputs label={"Credit card No."} />
             <Inputs label={"Name On Card"} />
@@ -32,7 +32,7 @@ function CreditCard() {
             <Inputs label={"Expiry Date"} />
             <Inputs label={"Cvv No."} />
           </div>
-          <div className="flex justify-end  ">
+          <div className="flex mt-2 justify-end  ">
             <Button buttonName={"Pay Now"} />
           </div>
         </div>

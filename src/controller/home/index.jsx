@@ -18,12 +18,17 @@ import Card from "../../shared/card";
 // Banner Images
 import BannerImg from "../../assets/image/bannerimage.png";
 import SpecialBG from "../../assets/image/specialFoodBG.png";
+import HomeMealPlanBg from "../../assets/image/homeMealPlanBG.png";
 
 // it Works Card
 import CardOne from "../../assets/image/card1.png";
 import CardTwo from "../../assets/image/card2.png";
 import CardThree from "../../assets/image/card3.png";
 import "./index.css";
+import MobileOne from "../../assets/image/mobile1.png";
+import MobileTwo from "../../assets/image/mobile2.png";
+import GooglePlayStoreLogo from "../../assets/image/googlePlayLogo.png";
+import AppleLogo from "../../assets/image/appleLogo.png";
 
 //foodCard
 import FoodCardImg from "../../assets/image/cardFood1.png";
@@ -121,11 +126,9 @@ const Home = () => {
   return (
     <>
       <div className="w-full h-full ">
-        {/* <Header /> */}
-
         <Banner bannerStyle={bannerStyle} content={content} />
 
-        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-5 md:px-16  w-full justify-center items-center bg-red-200">
+        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-5 md:px-16  w-full justify-center items-center ">
           <div className="flex flex-col gap-2 sm:gap-5 text-center sm:w-[70vw]">
             <div className="text-3xl font-bold">
               Today <span className="text-theme-color">Special</span> Offers
@@ -187,7 +190,10 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col py-10 sm:py-14 px-3 sm:px-5 md:px-16 w-full justify-center items-center bg-white text-black">
+        <div
+          className="flex flex-col py-10 sm:py-14 px-3 sm:px-5 md:px-16 w-full justify-center items-center bg-white text-black bg-cover object-cover bg-no-repeat"
+          style={{ backgroundImage: `url(${HomeMealPlanBg})` }}
+        >
           <div className="flex flex-col gap-2 sm:gap-5 text-center sm:w-[70vw]">
             <div className="text-3xl font-bold">Meal Plans</div>
 
@@ -228,7 +234,10 @@ const Home = () => {
             ))}
           </div>
 
-          <Link to="/meal-plan" className="flex items-center cursor-pointer">
+          <Link
+            to="/meal-plan"
+            className="flex items-center cursor-pointer mb-[5rem]"
+          >
             <span className="text-theme-color text-lg sm:text-2xl font-bold">
               View More
             </span>
@@ -251,11 +260,32 @@ const Home = () => {
               inventore, modi debitis vero ipsum eos? Harum dolor officia atque,
               porro in maxime eos minus qui esse! Animi tenetur quibusdam vitae.
             </p>
+            <div className="flex gap-8 mb-[5rem]">
+              <p className="flex gap-2 justify-center items-center bg-black text-white p-2 rounded-md cursor-pointer">
+                <img className="w-6" src={GooglePlayStoreLogo} alt="" />
+                <p className="flex flex-col leading-3">
+                  <span className="text-[9px]">GET IT ON</span>
+                  <span className="font-semibold">Google Play</span>
+                </p>
+              </p>
+              <p className="flex gap-2 justify-center items-center bg-black text-white px-3 py-2 rounded-md cursor-pointer">
+                <img className="w-6" src={AppleLogo} alt="" />
+                <p className="flex flex-col leading-3">
+                  <span className="text-[9px]">Download on the</span>
+                  <span className="font-semibold">App Store</span>
+                </p>
+              </p>
+            </div>
           </div>
-          <div></div>
+          <div className="w-full flex justify-center sm:w-1/2 relative">
+            <div className="absolute left-24 top-[-10rem]">
+              <img className="h-[25rem]" src={MobileOne} alt="" />
+            </div>
+            <div className="absolute right-12 top-[-5rem]">
+              <img className="h-[25rem]" src={MobileTwo} alt="" />
+            </div>
+          </div>
         </div>
-
-        {/* <Footer /> */}
       </div>
     </>
   );

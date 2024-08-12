@@ -48,16 +48,16 @@ const PlaceOrder = () => {
 
   return (
     <>
-      <div className="md:pt-16 pt-8 w-full">
+      <div className="md:pt-16 pt-8 w-full h-full">
         <div className="text-xl sm:text-2xl font-semibold flex justify-center sm:justify-start">
           <p>Choose A Delivery Address</p>
         </div>
 
-        <div className="mt-2 md:mt-8 shadow-2xl ">
+        <div className="mt-2 md:mt-8 shadow-2xl block">
           <div className="px-4 font-bold text-lg leading-5 sm:leading-0 sm:text-xl py-3 md:py-5 text-center sm:text-start">
             <p className="text-theme-color">Delivery Address</p>
           </div>
-          <div className="flex md:flex-row justify-center flex-col gap-2 lg:gap-5 lg:pl-4 pl-2 pr-2 lg:pr-8 my-3 md:py-5 py-3 ">
+          <div className="flex md:flex-row justify-center flex-col gap-2 lg:gap-5 lg:pl-4 pl-2 pr-2 lg:pr-8 my-3 md:py-5 py-3">
             <div className="flex border-[1px] border-gray-400 p-2 lg:p-3 shadow-xl w-full sm:w-auto">
               <div className="flex flex-col">
                 <div className="flex pb-2">
@@ -85,13 +85,19 @@ const PlaceOrder = () => {
             </div>
           </div>
         </div>
-        {/* <Button classStyle={"bg-black"} buttonName={"PlaceOrder"} /> */}
-        <button
+        <span className="flex justify-center">
+          <Button
+            classStyle={"!bg-black"}
+            buttonName={"PlaceOrder"}
+            handleClick={() => navigate("payment")}
+          />
+        </span>
+        {/* <button
           onClick={() => navigate("payment")}
           className="bg-black h-fit w-fit p-4  font-bold  text-white  ml-96 mt-4"
         >
           Place Order
-        </button>
+        </button> */}
       </div>
     </>
   );

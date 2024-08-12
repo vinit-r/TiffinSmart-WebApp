@@ -18,17 +18,20 @@ import {
   PlaceOrderLayout,
   PaymentLayout,
 } from "./Layout";
+import ScrollOnTop from "./util/ScrollOnTop";
 import Checkout from "./controller/checkout";
 import CouponModel from "./controller/coupon";
-import Help from "./controller/help";
-import AboutUs from "./controller/aboutUs";
-import ServiceUs from "./controller/serviceUs";
-import Contact from "./controller/contact";
-import Company from "./controller/company";
-import CookiePolicy from "./controller/cookiePolicy";
+import Help from "./pages/help";
+import AboutUs from "./pages/aboutUs";
+import ServiceUs from "./pages/serviceUs";
+import Contact from "./pages/contact";
+import Company from "./pages/company";
+import CookiePolicy from "./pages/cookiePolicy";
+import TermOfUse from "./pages/termOfUse";
 import PlaceOrder from "./controller/placeOrder";
-import OrderPlaced from "./controller/orderPlaced";
-import Customization from "./controller/customization";
+import PrivacyPolicy from "./pages/privacyPolicy";
+import SiteMap from "./pages/siteMap";
+
 import {
   CashOnDelivery,
   CreditCard,
@@ -67,9 +70,9 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="company" element={<Company />} />
       <Route path="cookie-policy" element={<CookiePolicy />} />
-      <Route path="order-placed" element={<OrderPlaced />} />
-      <Route path="customization" element={<Customization />} />
-      <Route path="profile" element={<Profile />} />
+      <Route path="term-of-use" element={<TermOfUse />} />
+      <Route path="privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="sitemap" element={<SiteMap />} />
     </Route>
   )
 );

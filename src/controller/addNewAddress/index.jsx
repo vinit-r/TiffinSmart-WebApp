@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "react-modal";
+import { RxCross1 } from "react-icons/rx";
 
 import Button from "../../shared/button";
 import Inputs from "../../shared/input";
@@ -25,12 +26,16 @@ const AddNewAddress = (props) => {
             <div className="w-full pb-16">
               <p className="flex justify-between items-center text-xl md:text-xl lg:text-2xl sm:font-bold font-semibold bg-black text-white w-full py-5 px-5 border-b-4 border-gray-500">
                 <span className="">Save New Address</span>
-                <span
+                {/* <span
                   className="cursor-pointer"
                   onClick={() => toggleClickOnAddAddress()}
                 >
                   X
-                </span>
+                </span> */}
+                <RxCross1
+                  className="h-8 w-8 cursor-pointer hover:bg-theme-color"
+                  onClick={() => toggleClickOnAddAddress()}
+                />
               </p>
               <div className="px-5 py-3 w-full">
                 <img src={MapImg} alt="map" />

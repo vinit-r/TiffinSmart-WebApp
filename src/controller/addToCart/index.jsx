@@ -1,9 +1,11 @@
 import React from "react";
+import { useState } from "react";
 
 import FoodImg from "../../assets/image/cardFood1.png";
 import Button from "../../shared/button";
 import FoodCard from "../foodCard";
 import { useLocation } from "react-router-dom";
+import CustomizationModel from "../customizationModal";
 
 const foodCardItemAddToCart = [
   {
@@ -33,6 +35,10 @@ const foodCardItemAddToCart = [
 ];
 
 const AddToCart = () => {
+  const [showCustomizationModal, setShowCustomizationModal] = useState(false);
+  const toggleCustomization = () => {
+    setShowCustomizationModal(!showCustomizationModal);
+  };
   return (
     <>
       <div className="w-full h-full px-4 pt-10 sm:pt-20 lg:px-12  ">
@@ -42,6 +48,11 @@ const AddToCart = () => {
             <Button
               buttonName={"Customize"}
               classStyle={"!bg-[#343c54] w-32 sm:!w-48 !text-center"}
+              handleClick={() => toggleCustomization()}
+            />
+            <CustomizationModel
+              showCustomizationModal={showCustomizationModal}
+              toggleCustomization={toggleCustomization}
             />
           </div>
           <div className="w-full flex flex-col">

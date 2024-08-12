@@ -12,7 +12,7 @@ import Button from "../../shared/button";
 const legalList = [
   { name: "Cookie Policy", link: "cookie-policy" },
   { name: "Terms of Use", link: "term-of-use" },
-  { name: "Privacy Policy", ink: "privacy-policy" },
+  { name: "Privacy Policy", link: "privacy-policy" },
   { name: "Sitemap", link: "sitemap" },
 ];
 const companyList = [
@@ -36,9 +36,9 @@ const Footer = () => {
               similique, eaque alias quae.
             </p>
             <div className="flex justify-center sm:justify-start gap-4 text-theme-color text-2xl">
-              <FontAwesomeIcon icon={faFacebook} />
-              <FontAwesomeIcon icon={faInstagram} />
-              <FontAwesomeIcon icon={faXTwitter} />
+              <FontAwesomeIcon className="cursor-pointer" icon={faFacebook} />
+              <FontAwesomeIcon className="cursor-pointer" icon={faInstagram} />
+              <FontAwesomeIcon className="cursor-pointer" icon={faXTwitter} />
             </div>
           </div>
 
@@ -51,7 +51,9 @@ const Footer = () => {
                 {companyList?.map((list, i) => {
                   return (
                     <div key={i}>
-                      <Link to={list?.link}>{list?.name}</Link>
+                      <Link to={list?.link} className="hover:text-theme-color">
+                        {list?.name}
+                      </Link>
                     </div>
                   );
                 })}
@@ -66,7 +68,9 @@ const Footer = () => {
                 {legalList?.map((items, i) => {
                   return (
                     <div key={i}>
-                      <Link to={items?.link}>{items?.name}</Link>
+                      <Link to={items?.link} className="hover:text-theme-color">
+                        {items?.name}{" "}
+                      </Link>
                     </div>
                   );
                 })}

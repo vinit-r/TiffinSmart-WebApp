@@ -18,7 +18,7 @@ const CouponAppliedModel = (props) => {
       >
         <div
           className="relative flex w-full h-[100vh] justify-center items-center px-5"
-          // onClick={() => toggleClickApply()}
+          onClick={() => toggleClickApply()}
         >
           <div className="w-full sm:w-1/2 lg:w-1/3  bg-white rounded-sm">
             <div className="relative flex flex-col items-center justify-center w-full h-full font-semibold sm:font-bold gap-2 sm:gap-8 px-5 py-5 sm:py-8">

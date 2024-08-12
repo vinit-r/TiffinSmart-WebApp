@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "react-modal";
+import { RxCross1 } from "react-icons/rx";
 
 import CouponAppliedModel from "../couponAppliedModal";
 import Button from "../../shared/button";
@@ -23,18 +24,22 @@ const CouponModel = (props) => {
         // className={`flex flex-col relative w-full mx-auto rounded-md outline-none`}
         className="Modal w-full mx-auto rounded-md outline-none"
         // overlayClassName={`fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 overflow-y-scroll`}
-        overlayClassName="Overlay fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 "
+        overlayClassName="Overlay fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-10 overflow-y-auto"
         ariaHideApp={false}
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
       >
         <div className="flex w-full h-full justify-end">
-          <div className="bg-white w-full sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 h-full flex justify-center py-5 sm:py-10 sm:px-5 px-3 overflow-y-scroll">
+          <div className="bg-white w-full sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 h-full flex justify-center pb-5 pt-5 sm:pb-10 sm:px-5 px-3 overflow-y-scroll">
             <div className="flex flex-col">
-              <img
+              {/* <img
                 className="h-5 w-7 sm:h-7 sm:w-9 cursor-pointer"
                 src={CloseIcon}
                 alt=""
+                onClick={() => toggleShowCoupon()}
+              /> */}
+              <RxCross1
+                className="h-8 w-8 cursor-pointer hover:bg-theme-color"
                 onClick={() => toggleShowCoupon()}
               />
               <div className="flex flex-col gap-4 pt-5 !font-footer_font">
