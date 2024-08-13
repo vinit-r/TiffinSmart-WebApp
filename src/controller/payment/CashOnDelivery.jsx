@@ -17,10 +17,7 @@ function CashOnDelivery() {
           If You wish to pay <br /> through cash
         </h1>
         <div className="mt-3">
-          <Button
-            buttonName="Confirm Order"
-            handleClick={() => navigate("/order-confirm")}
-          />
+          <Button buttonName="Confirm Order" to="../../../../order-confirm" />
         </div>
       </div>
     </div>

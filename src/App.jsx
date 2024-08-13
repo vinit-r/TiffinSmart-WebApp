@@ -32,7 +32,7 @@ import TermOfUse from "./pages/termOfUse";
 import PlaceOrder from "./controller/placeOrder";
 import PrivacyPolicy from "./pages/privacyPolicy";
 import SiteMap from "./pages/siteMap";
-// import OrderPlaced from "./controller/orderPlaced";
+import OrderPlaced from "./controller/orderPlaced";
 
 import {
   CashOnDelivery,
@@ -48,11 +48,13 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="meal-plan" element={<MealLayout />}>
         <Route index element={<MealPlan />} />
+        <Route path="order-confirm" element={<OrderPlaced />} />
         <Route path="add-to-cart" element={<AddToCart />} />
         <Route path="subscribe-meal" element={<SubscribeMealLayout />}>
           <Route index element={<SubscribeMeal />} />
           <Route path="checkout" element={<CheckOutLayout />}>
             <Route index element={<Checkout />} />
+            //! //! OrderConfirm
             <Route path="place-order" element={<PlaceOrderLayout />}>
               <Route index element={<PlaceOrder />} />
               <Route path="payment" element={<PaymentLayout />}>
@@ -65,8 +67,6 @@ const router = createBrowserRouter(
             </Route>
           </Route>
         </Route>
-
-        {/* <Route path="order-confirm" element={<OrderPlaced />} /> */}
       </Route>
       <Route path="help" element={<Help />} />
       <Route path="about-us" element={<AboutUs />} />

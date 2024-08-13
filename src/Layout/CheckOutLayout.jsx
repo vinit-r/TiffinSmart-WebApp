@@ -41,6 +41,7 @@ import { Outlet } from "react-router-dom";
 
 const CheckOutLayout = () => {
   const location = useLocation();
+  console.log(location.pathname);
   const noLayoutPaths = [
     "/meal-plan/subscribe-meal/checkout/place-order/payment",
     "/meal-plan/subscribe-meal/checkout/place-order/payment/debit-card",
@@ -48,6 +49,7 @@ const CheckOutLayout = () => {
     "/meal-plan/subscribe-meal/checkout/place-order/payment/upi-wallets",
     "/meal-plan/subscribe-meal/checkout/place-order/payment/credit-card",
   ];
+
   const shouldUseLayout = !noLayoutPaths.includes(location.pathname);
 
   const [showCoupon, setShowCoupon] = useState(false);
