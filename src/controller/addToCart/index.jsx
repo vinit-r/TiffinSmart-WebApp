@@ -69,7 +69,7 @@ const AddToCart = () => {
                 </span>
               </div>
             </div>
-            <div className="py-3 font-footer_font font-semibold lg:text-base sm:text-sm text-xs">
+            <div className="py-3 font-footer_font font-light lg:text-base sm:text-sm text-xs">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
               cumque numquam earum assumenda tempora reprehenderit labore quos
               ipsam, similique quam sint odit vitae animi voluptatem esse

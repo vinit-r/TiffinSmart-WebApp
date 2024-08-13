@@ -34,12 +34,12 @@ const CouponAppliedModel = (props) => {
                 <span className="text-base sm:text-2xl font-extrabold">
                   ₹100
                 </span>
-                <span className="font-footer_font text-gray-500 text-base">
+                <span className="font-footer_font text-gray-500 text-base font-light">
                   Save 100 with this Coupon
                 </span>
               </p>
 
-              <p className="font-footer_font text-center text-sm sm:text-base">
+              <p className="font-footer_font text-center text-sm sm:text-base font-light">
                 TRYNEW & save every time for you
               </p>
             </div>

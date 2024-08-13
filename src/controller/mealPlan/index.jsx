@@ -120,7 +120,7 @@ const MealPlan = () => {
           <div className="flex flex-col gap-2 sm:gap-5 text-center">
             <div className="text-3xl font-bold">Meal Plans</div>
 
-            <p className="font-banner-font font-semibold text-black text-sm sm:text-base">
+            <p className="font-banner-font font-light text-black text-sm sm:text-base">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Blanditiis in nisi consectetur, ipsam aperiam facere, repudiandae
               suscipit eius atque dicta ut minus porro? Esse fuga, ullam

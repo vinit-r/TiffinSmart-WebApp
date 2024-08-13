@@ -8,19 +8,19 @@ import ICICI from "../../assets/image/ICICI.png";
 const banks = [
   {
     icon: `${SBI}`,
-    btnName: "select",
+    btnName: "Select",
   },
   {
     icon: `${AXIS}`,
-    btnName: "select",
+    btnName: "Select",
   },
   {
     icon: `${ICICI}`,
-    btnName: "select",
+    btnName: "Select",
   },
   {
     icon: `${HDFC}`,
-    btnName: "select",
+    btnName: "Select",
   },
 ];
 function NetBanking() {

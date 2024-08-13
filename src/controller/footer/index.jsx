@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="w-full h-full bg-black flex flex-col justify-center text-white font-footer_font">
         <div className="grid grid-cols-1 text-center sm:text-start sm:grid-cols-2 lg:flex justify-between gap-5 py-20 px-4 lg:px-24 sm:px-16">
           <div className="flex flex-col gap-5 w-full">
-            <span className="block text-3xl font-semibold text-theme-color">
+            <span className="block text-3xl font-light text-theme-color">
               Tifinsmart
             </span>
             <p className="block">
@@ -44,7 +44,7 @@ const Footer = () => {
 
           <div className="flex w-full gap-5 justify-between">
             <div className="flex items-center flex-col gap-5 w-full">
-              <span className="block text-2xl font-semibold text-theme-color">
+              <span className="block text-2xl font-light text-theme-color">
                 Company
               </span>
               <div className="flex flex-col gap-2">
@@ -60,7 +60,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-5 w-full">
-              <span className="block text-2xl font-semibold text-theme-color">
+              <span className="block text-2xl font-light text-theme-color">
                 Legal
               </span>
 
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-5 w-full">
-            <span className="block text-2xl font-semibold text-theme-color">
+            <span className="block text-2xl font-light text-theme-color">
               Get in touch
             </span>
             <p className="block">
@@ -102,7 +102,7 @@ const Footer = () => {
               <Button
                 buttonName={"Subscribe"}
                 classStyle={
-                  "!rounded-3xl !font-normal !py-2 sm:!py-3 !px-3 sm:!px-5"
+                  "!rounded-3xl !font-normal !py-2 sm:!py-3 !px-3 sm:!px-5 "
                 }
               />
               {/* <button className="bg-theme-color py-3 px-5 rounded-3xl">

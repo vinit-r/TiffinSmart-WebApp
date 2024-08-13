@@ -17,6 +17,7 @@ import {
   CheckOutLayout,
   PlaceOrderLayout,
   PaymentLayout,
+  // OrderConfirmLayout,
 } from "./Layout";
 import ScrollOnTop from "./util/ScrollOnTop";
 import Checkout from "./controller/checkout";
@@ -31,6 +32,7 @@ import TermOfUse from "./pages/termOfUse";
 import PlaceOrder from "./controller/placeOrder";
 import PrivacyPolicy from "./pages/privacyPolicy";
 import SiteMap from "./pages/siteMap";
+// import OrderPlaced from "./controller/orderPlaced";
 
 import {
   CashOnDelivery,
@@ -63,6 +65,8 @@ const router = createBrowserRouter(
             </Route>
           </Route>
         </Route>
+
+        {/* <Route path="order-confirm" element={<OrderPlaced />} /> */}
       </Route>
       <Route path="help" element={<Help />} />
       <Route path="about-us" element={<AboutUs />} />

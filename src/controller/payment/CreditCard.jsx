@@ -30,7 +30,7 @@ function CreditCard() {
           </div>
           <div className="flex gap-3">
             <Inputs label={"Expiry Date"} />
-            <Inputs label={"Cvv No."} />
+            <Inputs label={"CVV No."} />
           </div>
           <div className="flex mt-2 justify-end  ">
             <Button buttonName={"Pay Now"} />

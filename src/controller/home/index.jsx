@@ -133,7 +133,7 @@ const Home = () => {
             <div className="text-3xl font-bold">
               Today <span className="text-theme-color">Special</span> Offers
             </div>
-            <p className="font-banner-font font-semibold text-gray-600 text-sm sm:text-base">
+            <p className="font-banner-font font-light text-gray-600 text-sm sm:text-base">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Blanditiis in nisi consectetur, ipsam aperiam facere, repudiandae
               suscipit eius atque dicta ut minus porro? Esse fuga, ullam
@@ -171,7 +171,7 @@ const Home = () => {
             <div className="text-3xl font-bold">
               How <span className="text-theme-color">it</span> works
             </div>
-            <p className="font-banner-font font-semibold text-white text-sm sm:text-base">
+            <p className="font-banner-font font-light text-white text-sm sm:text-base">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Blanditiis in nisi consectetur, ipsam aperiam facere, repudiandae
               suscipit eius atque dicta ut minus porro? Esse fuga, ullam
@@ -197,7 +197,7 @@ const Home = () => {
           <div className="flex flex-col gap-2 sm:gap-5 text-center sm:w-[70vw]">
             <div className="text-3xl font-bold">Meal Plans</div>
 
-            <p className="font-banner-font font-semibold text-black text-sm sm:text-base">
+            <p className="font-banner-font font-light text-black text-sm sm:text-base">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Blanditiis in nisi consectetur, ipsam aperiam facere, repudiandae
               suscipit eius atque dicta ut minus porro? Esse fuga, ullam
@@ -255,7 +255,7 @@ const Home = () => {
               <span className="text-[#df9f38]">Order</span> by Our Mobile{" "}
               <span className="text-[#f4444c]">App</span>
             </div>
-            <p className="font-footer_font font-semibold text-center sm:text-start text-gray-600">
+            <p className="font-footer_font font-light text-center sm:text-start text-gray-600">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
               inventore, modi debitis vero ipsum eos? Harum dolor officia atque,
               porro in maxime eos minus qui esse! Animi tenetur quibusdam vitae.

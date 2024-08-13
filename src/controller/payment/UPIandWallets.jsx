@@ -13,20 +13,20 @@ import Plus from "../../assets/image/Sum.png";
 const banks = [
   {
     icon: `${Paytm}`,
-    btnName: "select",
+    btnName: "Select",
     classStyle: "h-16 mb-2 w-16",
   },
   {
     icon: `${Amazon}`,
-    btnName: "select",
+    btnName: "Select",
   },
   {
     icon: `${PhonePay}`,
-    btnName: "select",
+    btnName: "Select",
   },
   {
     icon: `${Mobikwik}`,
-    btnName: "select",
+    btnName: "Select",
   },
 ];
 
