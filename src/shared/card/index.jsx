@@ -1,5 +1,4 @@
 import React from "react";
-import cardIcon from "../../assets/image/coffie.png";
 
 const Card = (props) => {
   const { icon, title, text } = props;
@@ -11,7 +10,7 @@ const Card = (props) => {
           <div className="font-extrabold text-xl mb-2 text-theme-color">
             {title}
           </div>
-          <p className="text-black text-base font-semibold">{text}</p>
+          <p className="text-black text-base font-light">{text}</p>
         </div>
       </div>
     </>

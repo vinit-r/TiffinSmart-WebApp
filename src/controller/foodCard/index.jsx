@@ -21,11 +21,11 @@ export default function FoodCard(props) {
     // <div className="flex flex-wrap justify-center">
     <div>
       <div className="max-w-sm  rounded-lg shadow-xl flex flex-col">
-        <a href="#">
-          <img className="p-2 rounded-2xl" src={`${image}`} alt="" />
+        <a href="#" aria-label="image">
+          <img className="p-2 rounded-2xl" src={`${image}`} alt="image" />
         </a>
         <div className="px-3 flex-1 flex flex-col justify-between">
-          <a href="#">
+          <a href="#" aria-label="text">
             <h5 className="mb-2 text-lg sm:text-xl font-bold tracking-tight text-black">
               {foodName}
             </h5>

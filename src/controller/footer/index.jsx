@@ -10,16 +10,16 @@ import { Link } from "react-router-dom";
 import Button from "../../shared/button";
 
 const legalList = [
-  { name: "Cookie Policy", link: "", id: "01" },
-  { name: "Terms of Use", link: "", id: "02" },
-  { name: "Privacy Policy", ink: "", id: "03" },
-  { name: "Sitemap", link: "", id: "04" },
+  { name: "Cookie Policy", link: "cookie-policy" },
+  { name: "Terms of Use", link: "term-of-use" },
+  { name: "Privacy Policy", link: "privacy-policy" },
+  { name: "Sitemap", link: "sitemap" },
 ];
 const companyList = [
-  { name: "About Us", link: "", id: "01" },
-  { name: "Service Us", link: "", id: "02" },
-  { name: "Contact", link: "", id: "03" },
-  { name: "Company", link: "", id: "04" },
+  { name: "About Us", link: "about-us" },
+  { name: "Service Us", link: "service-us" },
+  { name: "Contact", link: "contact" },
+  { name: "Company", link: "company" },
 ];
 
 const Footer = () => {
@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="w-full h-full bg-black flex flex-col justify-center text-white font-footer_font">
         <div className="grid grid-cols-1 text-center sm:text-start sm:grid-cols-2 lg:flex justify-between gap-5 py-20 px-4 lg:px-24 sm:px-16">
           <div className="flex flex-col gap-5 w-full">
-            <span className="block text-3xl font-semibold text-theme-color">
+            <span className="block text-3xl font-light text-theme-color">
               Tifinsmart
             </span>
             <p className="block">
@@ -36,37 +36,41 @@ const Footer = () => {
               similique, eaque alias quae.
             </p>
             <div className="flex justify-center sm:justify-start gap-4 text-theme-color text-2xl">
-              <FontAwesomeIcon icon={faFacebook} />
-              <FontAwesomeIcon icon={faInstagram} />
-              <FontAwesomeIcon icon={faXTwitter} />
+              <FontAwesomeIcon className="cursor-pointer" icon={faFacebook} />
+              <FontAwesomeIcon className="cursor-pointer" icon={faInstagram} />
+              <FontAwesomeIcon className="cursor-pointer" icon={faXTwitter} />
             </div>
           </div>
 
           <div className="flex w-full gap-5 justify-between">
             <div className="flex items-center flex-col gap-5 w-full">
-              <span className="block text-2xl font-semibold text-theme-color">
+              <span className="block text-2xl font-light text-theme-color">
                 Company
               </span>
               <div className="flex flex-col gap-2">
-                {companyList?.map((list) => {
+                {companyList?.map((list, i) => {
                   return (
-                    <div key={list.id}>
-                      <Link to={list?.link}>{list?.name}</Link>
+                    <div key={i}>
+                      <Link to={list?.link} className="hover:text-theme-color">
+                        {list?.name}
+                      </Link>
                     </div>
                   );
                 })}
               </div>
             </div>
             <div className="flex flex-col gap-5 w-full">
-              <span className="block text-2xl font-semibold text-theme-color">
+              <span className="block text-2xl font-light text-theme-color">
                 Legal
               </span>
 
               <div className="flex flex-col gap-2">
-                {legalList?.map((items) => {
+                {legalList?.map((items, i) => {
                   return (
-                    <div key={items.id}>
-                      <Link to={items?.link}>{items?.name}</Link>
+                    <div key={i}>
+                      <Link to={items?.link} className="hover:text-theme-color">
+                        {items?.name}{" "}
+                      </Link>
                     </div>
                   );
                 })}
@@ -75,7 +79,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-5 w-full">
-            <span className="block text-2xl font-semibold text-theme-color">
+            <span className="block text-2xl font-light text-theme-color">
               Get in touch
             </span>
             <p className="block">
@@ -98,7 +102,7 @@ const Footer = () => {
               <Button
                 buttonName={"Subscribe"}
                 classStyle={
-                  "!rounded-3xl !font-normal !py-2 sm:!py-3 !px-3 sm:!px-5"
+                  "!rounded-3xl !font-normal !py-2 sm:!py-3 !px-3 sm:!px-5 "
                 }
               />
               {/* <button className="bg-theme-color py-3 px-5 rounded-3xl">

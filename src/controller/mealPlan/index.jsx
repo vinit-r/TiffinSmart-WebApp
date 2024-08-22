@@ -120,7 +120,7 @@ const MealPlan = () => {
           <div className="flex flex-col gap-2 sm:gap-5 text-center">
             <div className="text-3xl font-bold">Meal Plans</div>
 
-            <p className="font-banner-font font-semibold text-black text-sm sm:text-base">
+            <p className="font-banner-font font-light text-black text-sm sm:text-base">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Blanditiis in nisi consectetur, ipsam aperiam facere, repudiandae
               suscipit eius atque dicta ut minus porro? Esse fuga, ullam
@@ -148,8 +148,9 @@ const MealPlan = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-2  py-5 sm:py-20 justify-center items-center">
-            {foodCardItem?.map((items) => (
+            {foodCardItem?.map((items, i) => (
               <FoodCard
+                key={i}
                 image={items?.image}
                 foodName={items?.foodName}
                 foodMenu={items?.foodMenu}

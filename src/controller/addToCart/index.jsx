@@ -1,8 +1,11 @@
 import React from "react";
+import { useState } from "react";
 
 import FoodImg from "../../assets/image/cardFood1.png";
 import Button from "../../shared/button";
 import FoodCard from "../foodCard";
+import { useLocation } from "react-router-dom";
+import CustomizationModel from "../customizationModal";
 
 const foodCardItemAddToCart = [
   {
@@ -11,7 +14,7 @@ const foodCardItemAddToCart = [
     foodMenu: "1 Vegitable, 1 Dal, 3 Chapati, 1 Salad/Soup",
     rating: "4",
     delivery: "Free",
-    time: "10 min",
+    time: "10 min", //TODO
   },
   {
     image: FoodImg,
@@ -32,6 +35,10 @@ const foodCardItemAddToCart = [
 ];
 
 const AddToCart = () => {
+  const [showCustomizationModal, setShowCustomizationModal] = useState(false);
+  const toggleCustomization = () => {
+    setShowCustomizationModal(!showCustomizationModal);
+  };
   return (
     <>
       <div className="w-full h-full px-4 pt-10 sm:pt-20 lg:px-12  ">
@@ -41,6 +48,11 @@ const AddToCart = () => {
             <Button
               buttonName={"Customize"}
               classStyle={"!bg-[#343c54] w-32 sm:!w-48 !text-center"}
+              handleClick={() => toggleCustomization()}
+            />
+            <CustomizationModel
+              showCustomizationModal={showCustomizationModal}
+              toggleCustomization={toggleCustomization}
             />
           </div>
           <div className="w-full flex flex-col">
@@ -57,7 +69,7 @@ const AddToCart = () => {
                 </span>
               </div>
             </div>
-            <div className="py-3 font-footer_font font-semibold lg:text-base sm:text-sm text-xs">
+            <div className="py-3 font-footer_font font-light lg:text-base sm:text-sm text-xs">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
               cumque numquam earum assumenda tempora reprehenderit labore quos
               ipsam, similique quam sint odit vitae animi voluptatem esse
@@ -81,7 +93,7 @@ const AddToCart = () => {
               <Button
                 buttonName={"Subscribe Meal"}
                 classStyle={"!bg-black  !px-[10px]"}
-                to={"subscribe-meal"}
+                to={"../subscribe-meal"}
               />
               <Button
                 buttonName={"Add to cart"}

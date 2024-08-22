@@ -153,7 +153,11 @@ const SubscribeMeal = () => {
           </div>
         </div>
         <div className="w-full flex justify-center md:justify-end px-2 lg:px-10 xl:px-16 pb-5 md:pb-10 cursor-pointer">
-          <Button buttonName={"Checkout"} classStyle={"!rounded-sm !px-16"} />
+          <Button
+            buttonName={"Checkout"}
+            to="checkout"
+            classStyle={"!rounded-sm !px-16"}
+          />
         </div>
       </div>
     </>

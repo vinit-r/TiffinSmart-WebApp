@@ -18,7 +18,7 @@ const CouponAppliedModel = (props) => {
       >
         <div
           className="relative flex w-full h-[100vh] justify-center items-center px-5"
-          // onClick={() => toggleClickApply()}
+          onClick={() => toggleClickApply()}
         >
           <div className="w-full sm:w-1/2 lg:w-1/3  bg-white rounded-sm">
             <div className="relative flex flex-col items-center justify-center w-full h-full font-semibold sm:font-bold gap-2 sm:gap-8 px-5 py-5 sm:py-8">
@@ -34,12 +34,12 @@ const CouponAppliedModel = (props) => {
                 <span className="text-base sm:text-2xl font-extrabold">
                   ₹100
                 </span>
-                <span className="font-footer_font text-gray-500 text-base">
+                <span className="font-footer_font text-gray-500 text-base font-light">
                   Save 100 with this Coupon
                 </span>
               </p>
 
-              <p className="font-footer_font text-center text-sm sm:text-base">
+              <p className="font-footer_font text-center text-sm sm:text-base font-light">
                 TRYNEW & save every time for you
               </p>
             </div>
