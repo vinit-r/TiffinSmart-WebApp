@@ -19,8 +19,8 @@ import {
   PaymentLayout,
 } from "./Layout";
 import ScrollOnTop from "./util/ScrollOnTop";
-import Checkout from "./controller/checkout";
 import CouponModel from "./controller/coupon";
+import Checkout from "./controller/checkout";
 import Help from "./pages/help";
 import AboutUs from "./pages/aboutUs";
 import ServiceUs from "./pages/serviceUs";
@@ -32,7 +32,6 @@ import PlaceOrder from "./controller/placeOrder";
 import PrivacyPolicy from "./pages/privacyPolicy";
 import SiteMap from "./pages/siteMap";
 import OrderPlaced from "./controller/orderPlaced";
-
 import {
   CashOnDelivery,
   CreditCard,
