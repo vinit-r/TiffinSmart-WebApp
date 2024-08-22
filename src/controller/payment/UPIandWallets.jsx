@@ -54,7 +54,7 @@ function UPIandWallets() {
                 return (
                   <div
                     key={i}
-                    className="border-r-[1.5px] flex flex-col items-center justify-between border-dashed border-black p-4"
+                    className="border-r-[1.5px] w-full flex flex-col items-center justify-between border-dashed border-black p-4"
                   >
                     <img
                       className={`block${bank?.classStyle} `}

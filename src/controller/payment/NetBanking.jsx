@@ -35,7 +35,7 @@ function NetBanking() {
             <div className="mr-4 mt-7">
               <h1 className="font-extrabold text-xl">Popular Banks</h1>
             </div>
-            <div className="flex mt-7 justify-between border-dashed border-black border-r-0 border-[1.5px]">
+            <div className="flex mt-7  justify-between border-dashed border-black border-r-0 border-[1.5px]">
               {banks.map((bank, i) => {
                 return (
                   <div
