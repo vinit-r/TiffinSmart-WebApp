@@ -17,7 +17,6 @@ import {
   CheckOutLayout,
   PlaceOrderLayout,
   PaymentLayout,
-  // OrderConfirmLayout,
 } from "./Layout";
 import ScrollOnTop from "./util/ScrollOnTop";
 import Checkout from "./controller/checkout";
@@ -54,7 +53,6 @@ const router = createBrowserRouter(
           <Route index element={<SubscribeMeal />} />
           <Route path="checkout" element={<CheckOutLayout />}>
             <Route index element={<Checkout />} />
-            //! //! OrderConfirm
             <Route path="place-order" element={<PlaceOrderLayout />}>
               <Route index element={<PlaceOrder />} />
               <Route path="payment" element={<PaymentLayout />}>
@@ -84,7 +82,7 @@ const router = createBrowserRouter(
 function App() {
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router} />
     </>
   );
 }
